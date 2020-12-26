@@ -1,0 +1,19 @@
+div {
+    font-size: 20pt;
+    padding: 20px 5px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  button {
+    width:auto;
+    padding:0;
+    margin:0;
+    background:none;
+    border:0;
+    font-size:0;
+    line-height:0;
+    overflow:visible;
+    cursor:pointer;
+    outline:0;
+  }
