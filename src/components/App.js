@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-// import AppContext from '../contexts/AppContext'
 import Hand from './Hand'
 import Result from './Result'
 
@@ -7,12 +6,10 @@ import {
   IMAGE_DIR,
   TITLE,
   HAND_TYPE,
+  START_PHRASE,
+  RESULT_TYPE,
 } from "../const"
 import '../css/App.css'
-
-const START_PHRASE = "開始！"
-
-const RESULT_TYPE = Array.of("引き分け", "勝ち", "負け")
 
 const judge = (myHand, opHand) => {
   if (myHand === opHand) {
