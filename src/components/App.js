@@ -54,7 +54,7 @@ const App = () => {
   const MyHand = () => {
     return (
       <div>
-        {HAND_TYPE.map((hand_type) => { return <button type="button" onClick={hand}><img src={IMAGE_DIR + hand_type + ".png"} alt={hand_type} name={hand_type} /></button> })}
+        {HAND_TYPE.map((hand_type,index) => { return <button key={index} type="button" onClick={hand}><img src={IMAGE_DIR + hand_type + ".png"} alt={hand_type} name={hand_type} /></button> })}
       </div>
     )
   }
