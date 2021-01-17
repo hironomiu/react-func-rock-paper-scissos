@@ -8,6 +8,7 @@ import {
   HAND_TYPE,
   START_PHRASE,
   RESULT_TYPE,
+  ROCK_BASE64,
 } from "../const"
 import '../css/App.css'
 
@@ -62,7 +63,7 @@ const App = () => {
   return (
     <>
       <div>
-        <h1>{TITLE}</h1>
+        <h1><img src={ROCK_BASE64} alt="" name={hand} />{TITLE}<img src={IMAGE_DIR + "rock.png"} alt="" name={hand} /></h1>
         <br />
         <Hand hand={opHand} />
         <br />
