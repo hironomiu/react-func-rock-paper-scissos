@@ -1,15 +1,21 @@
 # react-func-rock-paper-scissos
-じゃんけんゲームでReact関数コンポーネントの利用例
 
-## Start
+じゃんけんゲームで React 関数コンポーネントの利用例
+
+## Install & Start
+
 ```
+$ npm install
+
 $ npm start
 ```
 
 ## memo
-imageタグにて画像をBASE64で出力してみたかったのでh4>titleの前に記載(後ろは元のpng画像)
 
-画像 -> Base64にencode
+image タグにて画像を BASE64 で出力してみたかったので h4>title の前に記載(後ろは元の png 画像)
+
+画像 -> Base64 に encode
+
 ```
 let fs = require('fs');
 fs.readFile('rock.png', 'base64', function(err, data) {
