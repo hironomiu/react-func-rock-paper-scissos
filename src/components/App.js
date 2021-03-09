@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import Hand from './Hand'
-import Result from './Result'
+import React, { useState } from "react"
+import Hand from "./Hand"
+import Result from "./Result"
 
 import {
   IMAGE_DIR,
@@ -10,14 +10,16 @@ import {
   RESULT_TYPE,
   ROCK_BASE64,
 } from "../const"
-import '../css/App.css'
+import "../css/App.css"
 
 const judge = (myHand, opHand) => {
   if (myHand === opHand) {
     return RESULT_TYPE[0]
-  } else if ((myHand === HAND_TYPE[0] && opHand === HAND_TYPE[1]) ||
+  } else if (
+    (myHand === HAND_TYPE[0] && opHand === HAND_TYPE[1]) ||
     (myHand === HAND_TYPE[1] && opHand === HAND_TYPE[2]) ||
-    (myHand === HAND_TYPE[2] && opHand === HAND_TYPE[0])) {
+    (myHand === HAND_TYPE[2] && opHand === HAND_TYPE[0])
+  ) {
     return RESULT_TYPE[1]
   } else {
     return RESULT_TYPE[2]
@@ -32,7 +34,7 @@ const App = () => {
   const [lose, setLose] = useState(0)
   const [draw, setDraw] = useState(0)
 
-  const hand = e => {
+  const hand = (e) => {
     e.preventDefault()
     if (!e.target.name) return
     const myHand = e.target.name
@@ -55,7 +57,17 @@ const App = () => {
   const MyHand = () => {
     return (
       <div>
-        {HAND_TYPE.map((hand_type,index) => { return <button key={index} type="button" onClick={hand}><img src={IMAGE_DIR + hand_type + ".png"} alt={hand_type} name={hand_type} /></button> })}
+        {HAND_TYPE.map((hand_type, index) => {
+          return (
+            <button key={index} type="button" onClick={hand}>
+              <img
+                src={IMAGE_DIR + hand_type + ".png"}
+                alt={hand_type}
+                name={hand_type}
+              />
+            </button>
+          )
+        })}
       </div>
     )
   }
@@ -63,19 +75,18 @@ const App = () => {
   return (
     <>
       <div>
-        <h1><img src={ROCK_BASE64} alt="" name={hand} />{TITLE}<img src={IMAGE_DIR + "rock.png"} alt="" name={hand} /></h1>
-        <br />
+        <h1>
+          <img src={ROCK_BASE64} alt="" name={hand} />
+          {TITLE}
+          <img src={IMAGE_DIR + "rock.png"} alt="" name={hand} />
+        </h1>
         <Hand hand={opHand} />
-        <br />
         <Result result={result} win={win} draw={draw} lose={lose} />
-        <br />
         <Hand hand={myHand} />
-        <br />
         <MyHand />
       </div>
     </>
   )
 }
 
-
-export default App;
+export default App

@@ -25,3 +25,5 @@ yarn-error.log*
 .eslintcache
 *.lock
 package-lock.json
+
+.firebase
