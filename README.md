@@ -1,6 +1,6 @@
 # react-func-rock-paper-scissos
 
-[![action](https://github.com/hironomiu/react-func-rock-paper-scissos/workflows/action/badge.svg?branch=main)](https://github.com/hironomiu/react-func-rock-paper-scissos/actions?query=workflow%3Aaction)
+[![Deploy to Firebase Hosting on merge](https://github.com/hironomiu/react-func-rock-paper-scissos/actions/workflows/firebase-hosting-merge.yml/badge.svg)](https://github.com/hironomiu/react-func-rock-paper-scissos/actions?query=workflow%3Aaction)
 
 じゃんけんゲームで React 関数コンポーネントの利用例
 
