@@ -78,7 +78,7 @@ const App = () => {
         <h1>
           <img src={ROCK_BASE64} alt="" name={hand} />
           {TITLE}
-          <img src={IMAGE_DIR + "scissors.png"} alt="" name={hand} />
+          <img src={IMAGE_DIR + "paper.png"} alt="" name={hand} />
         </h1>
         <Hand hand={opHand} />
         <Result result={result} win={win} draw={draw} lose={lose} />
