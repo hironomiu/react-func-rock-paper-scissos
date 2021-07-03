@@ -13,17 +13,15 @@ import {
 import "../css/App.css"
 
 const judge = (myHand, opHand) => {
-  if (myHand === opHand) {
-    return RESULT_TYPE[0]
-  } else if (
+  if (myHand === opHand) return RESULT_TYPE[0]
+  if (
     (myHand === HAND_TYPE[0] && opHand === HAND_TYPE[1]) ||
     (myHand === HAND_TYPE[1] && opHand === HAND_TYPE[2]) ||
     (myHand === HAND_TYPE[2] && opHand === HAND_TYPE[0])
   ) {
     return RESULT_TYPE[1]
-  } else {
-    return RESULT_TYPE[2]
   }
+  return RESULT_TYPE[2]
 }
 
 const App = () => {
@@ -74,17 +72,15 @@ const App = () => {
 
   return (
     <>
-      <div>
-        <h1>
-          <img src={ROCK_BASE64} alt="" name={hand} />
-          {TITLE}
-          <img src={IMAGE_DIR + "paper.png"} alt="" name={hand} />
-        </h1>
-        <Hand hand={opHand} />
-        <Result result={result} win={win} draw={draw} lose={lose} />
-        <Hand hand={myHand} />
-        <MyHand />
-      </div>
+      <h1>
+        <img src={ROCK_BASE64} alt="" name={hand} />
+        {TITLE}
+        <img src={IMAGE_DIR + "paper.png"} alt="" name={hand} />
+      </h1>
+      <Hand hand={opHand} />
+      <Result result={result} win={win} draw={draw} lose={lose} />
+      <Hand hand={myHand} />
+      <MyHand />
     </>
   )
 }
