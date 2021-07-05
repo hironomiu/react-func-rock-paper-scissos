@@ -4,12 +4,22 @@
 
 じゃんけんゲームで React 関数コンポーネントの利用例
 
+## Node
+
+16.2.0 (nodenv で固定)
+
 ## Install & Start
 
 ```
 $ npm install
 
 $ npm start
+```
+
+## build
+
+```
+$ npm run build
 ```
 
 ## memo
@@ -24,3 +34,7 @@ fs.readFile('rock.png', 'base64', function(err, data) {
   console.log(data);
 });
 ```
+
+## Firebase deploy
+
+build をし GitHub に push することで実装
