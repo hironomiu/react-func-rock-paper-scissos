@@ -28,9 +28,9 @@ const App = () => {
   const [myHand, setMyHand] = useState(HAND_TYPE[0])
   const [opHand, setOpHand] = useState(HAND_TYPE[0])
   const [result, setResult] = useState(START_PHRASE)
-  const [win, setWin] = useState(0)
-  const [lose, setLose] = useState(0)
-  const [draw, setDraw] = useState(0)
+  const [winCount, setWinCount] = useState(0)
+  const [loseCount, setLoseCount] = useState(0)
+  const [drawCount, setDrawCount] = useState(0)
 
   const hand = (e) => {
     e.preventDefault()
@@ -40,11 +40,11 @@ const App = () => {
     const result = judge(myHand, opHand)
 
     if (result === RESULT_TYPE[0]) {
-      setDraw(draw + 1)
+      setDrawCount(drawCount + 1)
     } else if (result === RESULT_TYPE[1]) {
-      setWin(win + 1)
+      setWinCount(winCount + 1)
     } else {
-      setLose(lose + 1)
+      setLoseCount(loseCount + 1)
     }
 
     setMyHand(myHand)
@@ -78,7 +78,12 @@ const App = () => {
         <img src={IMAGE_DIR + "paper.png"} alt="" name={hand} />
       </h1>
       <Hand hand={opHand} />
-      <Result result={result} win={win} draw={draw} lose={lose} />
+      <Result
+        result={result}
+        win={winCount}
+        draw={drawCount}
+        lose={loseCount}
+      />
       <Hand hand={myHand} />
       <MyHand />
     </>
