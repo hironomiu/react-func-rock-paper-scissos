@@ -54,35 +54,33 @@ const App = () => {
 
   const MyHand = () => {
     return (
-      <div>
-        {HAND_TYPE.map((hand_type, index) => {
-          return (
-            <button key={index} type="button" onClick={hand}>
-              <img
-                src={IMAGE_DIR + hand_type + ".png"}
-                alt={hand_type}
-                name={hand_type}
-              />
-            </button>
-          )
-        })}
-      </div>
+      <>
+        {HAND_TYPE.map((hand_type, index) => (
+          <button key={index} type="button" onClick={hand}>
+            <img
+              src={IMAGE_DIR + hand_type + ".png"}
+              alt={hand_type}
+              name={hand_type}
+            />
+          </button>
+        ))}
+      </>
     )
   }
 
   return (
     <>
       <h1>
-        <img src={ROCK_BASE64} alt="" name={hand} />
+        <img src={ROCK_BASE64} alt="" />
         {TITLE}
-        <img src={IMAGE_DIR + "paper.png"} alt="" name={hand} />
+        <img src={IMAGE_DIR + "paper.png"} alt="" />
       </h1>
       <Hand hand={opHand} />
       <Result
         result={result}
-        win={winCount}
-        draw={drawCount}
-        lose={loseCount}
+        winCount={winCount}
+        drawCount={drawCount}
+        loseCount={loseCount}
       />
       <Hand hand={myHand} />
       <MyHand />

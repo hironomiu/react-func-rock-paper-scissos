@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react"
 
-const Result = ({ result ,win,lose,draw}) => {
-    return (
-        <div>
-            結果:{result}
-            <br/>
-            勝敗：{win}勝、{lose}敗、{draw}分
-        </div>
-    )
+const Result = ({ result, winCount, loseCount, drawCount }) => {
+  return (
+    <div>
+      結果:{result}
+      <br />
+      勝敗：{winCount}勝、{loseCount}敗、{drawCount}分
+    </div>
+  )
 }
 export default Result
