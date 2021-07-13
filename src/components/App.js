@@ -11,18 +11,7 @@ import {
   ROCK_BASE64,
 } from "../const"
 import "../css/App.css"
-
-const judge = (myHand, opHand) => {
-  if (myHand === opHand) return RESULT_TYPE[0]
-  if (
-    (myHand === HAND_TYPE[0] && opHand === HAND_TYPE[1]) ||
-    (myHand === HAND_TYPE[1] && opHand === HAND_TYPE[2]) ||
-    (myHand === HAND_TYPE[2] && opHand === HAND_TYPE[0])
-  ) {
-    return RESULT_TYPE[1]
-  }
-  return RESULT_TYPE[2]
-}
+import { judge } from "../libs"
 
 const App = () => {
   const [myHand, setMyHand] = useState(HAND_TYPE[0])
