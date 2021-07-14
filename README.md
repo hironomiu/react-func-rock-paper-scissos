@@ -8,6 +8,22 @@
 
 16.2.0 (nodenv で固定)
 
+参考
+
+```
+$ npm list --depth=0
+react-func-rock-paper-scissors@0.1.0
+react-func-rock-paper-scissos
+├── @testing-library/jest-dom@5.14.1
+├── @testing-library/react@11.2.7
+├── @testing-library/user-event@12.8.3
+├── firebase-tools@9.14.0
+├── react-dom@17.0.2
+├── react-scripts@4.0.1
+├── react@17.0.2
+└── web-vitals@0.2.4
+```
+
 ## Install & Start
 
 ```
@@ -34,6 +50,10 @@ fs.readFile('rock.png', 'base64', function(err, data) {
   console.log(data);
 });
 ```
+
+## tests
+
+`libs/index.text.js` -> `libs/index.js`
 
 ## Firebase deploy
 
