@@ -38,19 +38,6 @@ $ npm start
 $ npm run build
 ```
 
-## memo
-
-image タグにて画像を BASE64 で出力してみたかったので h4>title の前に記載(後ろは元の png 画像)
-
-画像 -> Base64 に encode
-
-```
-let fs = require('fs');
-fs.readFile('rock.png', 'base64', function(err, data) {
-  console.log(data);
-});
-```
-
 ## tests
 
 `libs/index.text.js` -> `libs/index.js`
@@ -58,3 +45,16 @@ fs.readFile('rock.png', 'base64', function(err, data) {
 ## Firebase deploy
 
 build をし GitHub に push することで実装
+
+## memo
+
+Title コンポーネント先頭 image タグにて画像を BASE64 で出力 h4>title の前に記載(後ろは元の png 画像で出力)
+
+Base64 に以下で encode し`src/const/index.html`に設定
+
+```
+let fs = require('fs');
+fs.readFile('rock.png', 'base64', function(err, data) {
+  console.log(data);
+});
+```
