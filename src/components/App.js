@@ -1,17 +1,16 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import Hand from "./Hand"
 import Result from "./Result"
+import MyHand from "./MyHand"
 
 import {
   IMAGE_DIR,
   TITLE,
   HAND_TYPE,
   START_PHRASE,
-  RESULT_TYPE,
   ROCK_BASE64,
 } from "../const"
 import "../css/App.css"
-import { judge } from "../libs"
 
 const App = () => {
   const [myHand, setMyHand] = useState(HAND_TYPE[0])
@@ -20,42 +19,6 @@ const App = () => {
   const [winCount, setWinCount] = useState(0)
   const [loseCount, setLoseCount] = useState(0)
   const [drawCount, setDrawCount] = useState(0)
-
-  const hand = (e) => {
-    e.preventDefault()
-    if (!e.target.name) return
-    const myHand = e.target.name
-    const opHand = HAND_TYPE[Math.floor(Math.random() * HAND_TYPE.length)]
-    const result = judge(myHand, opHand)
-
-    if (result === RESULT_TYPE[0]) {
-      setDrawCount(drawCount + 1)
-    } else if (result === RESULT_TYPE[1]) {
-      setWinCount(winCount + 1)
-    } else {
-      setLoseCount(loseCount + 1)
-    }
-
-    setMyHand(myHand)
-    setOpHand(opHand)
-    setResult(result)
-  }
-
-  const MyHand = () => {
-    return (
-      <>
-        {HAND_TYPE.map((hand_type, index) => (
-          <button key={index} type="button" onClick={hand}>
-            <img
-              src={IMAGE_DIR + hand_type + ".png"}
-              alt={hand_type}
-              name={hand_type}
-            />
-          </button>
-        ))}
-      </>
-    )
-  }
 
   return (
     <>
@@ -72,7 +35,14 @@ const App = () => {
         loseCount={loseCount}
       />
       <Hand hand={myHand} />
-      <MyHand />
+      <MyHand
+        setDrawCount={setDrawCount}
+        setWinCount={setWinCount}
+        setLoseCount={setLoseCount}
+        setMyHand={setMyHand}
+        setOpHand={setOpHand}
+        setResult={setResult}
+      />
     </>
   )
 }

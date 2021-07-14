@@ -1,5 +1,3 @@
-import React from "react"
-
 const Result = ({ result, winCount, loseCount, drawCount }) => {
   return (
     <div>

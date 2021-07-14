@@ -1,4 +1,3 @@
-import React from "react"
 import { IMAGE_DIR } from "../const"
 
 const Hand = ({ hand }) => {
