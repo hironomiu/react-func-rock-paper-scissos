@@ -30,8 +30,8 @@ const MyHand = ({
   }
   return (
     <>
-      {HAND_TYPE.map((hand_type, index) => (
-        <button key={index} type="button" onClick={hand}>
+      {HAND_TYPE.map((hand_type) => (
+        <button key={hand_type} type="button" onClick={(e) => hand(e)}>
           <img
             src={IMAGE_DIR + hand_type + ".png"}
             alt={hand_type}
