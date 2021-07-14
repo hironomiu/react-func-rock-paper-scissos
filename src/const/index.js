@@ -1,5 +1,5 @@
 export const IMAGE_DIR = "./images/"
-export const TITLE = "じゃじゃじゃじゃんけん"
+export const TITLE = "天下一じゃんけん"
 export const HAND_TYPE = ["rock", "scissors", "paper"]
 export const START_PHRASE = "開始！"
 export const RESULT_TYPE = ["引き分け", "勝ち", "負け"]
