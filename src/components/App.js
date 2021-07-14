@@ -2,14 +2,9 @@ import { useState } from "react"
 import Hand from "./Hand"
 import Result from "./Result"
 import MyHand from "./MyHand"
+import Title from "./Title"
 
-import {
-  IMAGE_DIR,
-  TITLE,
-  HAND_TYPE,
-  START_PHRASE,
-  ROCK_BASE64,
-} from "../const"
+import { HAND_TYPE, START_PHRASE } from "../const"
 import "../css/App.css"
 
 const App = () => {
@@ -22,11 +17,7 @@ const App = () => {
 
   return (
     <>
-      <h1>
-        <img src={ROCK_BASE64} alt="" />
-        {TITLE}
-        <img src={IMAGE_DIR + "paper.png"} alt="" />
-      </h1>
+      <Title />
       <Hand hand={opHand} />
       <Result
         result={result}
