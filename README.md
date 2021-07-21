@@ -2,7 +2,7 @@
 
 [![Deploy to Firebase Hosting on merge](https://github.com/hironomiu/react-func-rock-paper-scissos/actions/workflows/firebase-hosting-merge.yml/badge.svg)](https://github.com/hironomiu/react-func-rock-paper-scissos/actions?query=workflow%3Aaction)
 
-じゃんけんゲームで React 関数コンポーネントの利用例
+React Hooks & Firebase ホスティング & GitHub Actions でじゃんけんゲームの実装
 
 ## Node
 
@@ -26,16 +26,18 @@ react-func-rock-paper-scissos
 
 ## Install & Start
 
-```
-$ npm install
+`yarn`をインストールしていない場合は全て`npm`で実行
 
-$ npm start
+```
+$ yarn install
+
+$ yarn start
 ```
 
 ## build
 
 ```
-$ npm run build
+$ yarn build
 ```
 
 ## tests
